@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+*{
+  list-style: none;
+}
+
+
+.wrap{
+  width: 100%;
+  height: auto;
+  padding: 1.5rem
+  margin: 0 auto;
+}
+
+/* 버튼 비활성화 일때 */
+ul {
+  display: flex;
+  justify-content:space-around; 
+}
+ul li {
+  color: gray;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  border: 1px solid #000;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+
+}
+/* 버튼 활성 */
+ul li.on {
+  color: #fff;
+  background-color: tomato;
+  transition: 0.5s;
+}
+
+section {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;  
+}
+
+.con-menu {
+  position: relative;
+}
+
+.con {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: bold;
+
+}
+
+/* 박스 비활성 */
+section article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+}
+
+section article:nth-child(1) {
+  background-color: dodgerblue;
+}
+section article:nth-child(2) {
+  background-color: yellow;
+}
+section article:nth-child(3) {
+  background-color: tomato;
+}
+/* 박스 활성 */
+section article.on {
+  transition: 0.5s;
+  opacity: 1;
+}
+/* 박스 순서별로 배경색 지정 */
